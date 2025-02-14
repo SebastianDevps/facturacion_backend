@@ -37,7 +37,10 @@ coneccionDB()
 //     }
 // }
 // app.use(cors(corsOptions))
-app.use(cors())
+app.use(cors({
+    origin: process.env.URL_FRONT || '*',
+    credentials: true
+}))
 // =================================================
 
 // Rutas
